@@ -31,7 +31,7 @@ def run():
         response = stub.CrearCompania(compania)
         
     print("Greeter client received: " + response.mensaje)
-    print(f'Confirmacion: {response.reserva}')
+    print(f'Confirmacion: {response}')
 
 
 if __name__ == '__main__':

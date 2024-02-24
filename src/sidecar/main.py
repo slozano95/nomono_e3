@@ -2,14 +2,14 @@ from concurrent import futures
 import logging
 
 import grpc
-from aeroalpes.pb2py import vuelos_pb2
-from aeroalpes.pb2py import vuelos_pb2_grpc
+from aeroalpes.pb2py import companias_pb2
+from aeroalpes.pb2py import companias_pb2_grpc
 
 
-from aeroalpes.servicios.vuelos import Vuelos
+from aeroalpes.servicios.companias import Companias
 
 def agregar_servicios(servidor):
-    vuelos_pb2_grpc.add_VuelosServicer_to_server(Vuelos(), servidor)
+    companias_pb2_grpc.add_CompaniasServicer_to_server(Companias(), servidor)
 
 def serve():
     port = '50051'
