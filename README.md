@@ -1,3 +1,19 @@
+# Comandos de ejecución. resumido
+#Correr flask (api que procesa los guardados)
+flask --app src/alpes/api --debug runeout=10000
+
+#Correr pulsar
+docker-compose --profile pulsar up
+
+#Correr sidecar servidor para recibir comando rpc
+python src/sidecar/main.py 
+
+#Enviar comando por grpc
+python src/sidecar/cliente.py
+
+#Recibir mensajes desde pulsar (topico de eventos)
+PENDING
+
 # Tutorial 5 - CQRS y manejo de eventos
 
 Repositorio con código base para el uso de un sistema usando el patrón CQRS y usando eventos de dominio e integración para la comunicación asíncrona entre componentes internos parte del mismo contexto acotado y sistemas externos.
